@@ -1,0 +1,7 @@
+-lib utest
+-lib hxnodejs
+-cp lib
+-cp test
+-main Test
+-D js-es5
+-js bin/second.js
