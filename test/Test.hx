@@ -4,7 +4,7 @@ import correios.WebServices;
 class Test {
     function new () {}
 
-    static function main() 
+    static function test() 
         {
         var args = {
             nCdEmpresa :"",
@@ -24,18 +24,21 @@ class Test {
         };
         var cws = new WebServices();
         trace (cws);
-        var callback = function (err:Dynamic, result:Dynamic) { trace("hi result=" );};
+        var callback = function (err:Dynamic, result:Dynamic) {
+            trace("hi result=" );
+            Assert.same(result.Valor,"17,20"); 
+        };
         trace (callback);
         cws.calcPreco(args, callback);
         trace ("done");
     }
-	// static function main()
-	// {
-	// 	trace("Hello World");
-	// 	var r = new utest.Runner();
-	// 	r.addCase(new Test());
-	// 	utest.ui.Report.create(r);
-	// 	r.run();
-    //     trace("Good bye World");
-	// }
+	static function main()
+	 {
+		trace("Hello World");
+		var r = new utest.Runner();
+		r.addCase(new Test());
+		utest.ui.Report.create(r);
+		r.run();
+        trace("Good bye World");
+	}
 }
