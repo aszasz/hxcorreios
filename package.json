@@ -1,0 +1,10 @@
+{
+  "name": "test-correios",
+  "description": "Experimenta a API node-correios",
+  "version": "0.0.0-alpha",
+  "main": "first.js",
+  "dependencies": {
+    "jsonfile": "^2.3.1",
+    "node-correios": "^2.1.1"
+  }
+}
