@@ -4,7 +4,7 @@ import correios.WebServices;
 class Test {
     function new () {}
 
-    static function test() 
+    public function test_plain_CalcPreco() 
         {
         var args = {
             nCdEmpresa :"",
@@ -32,6 +32,23 @@ class Test {
         cws.calcPreco(args, callback);
         trace ("done");
     }
+    // public function test_CalcPrazo()
+    // {
+    //     var args = {
+    //         nCdServico: "40010",
+    //         sCepOrigem: "04002003",
+    //         sCepDestino: "05616000",
+    //     };
+    //     var cws = new WebServices();
+    //     trace (cws);
+    //     var callback = function (err:Dynamic, result:Dynamic) {
+    //         trace("hi result=" );
+    //         Assert.same(result.PrazoEntrega,"1"); 
+    //     };
+    //     trace (callback);
+    //     cws.calcPreco(args, callback);
+    //     trace ("done");
+    // }
 	static function main()
 	 {
 		trace("Hello World");
