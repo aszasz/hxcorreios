@@ -2,6 +2,6 @@
 -lib hxnodejs
 -cp lib
 -cp test
--main Test
+-main TestRun
 -D js-es5
 -js bin/second.js
