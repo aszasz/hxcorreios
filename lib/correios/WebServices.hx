@@ -91,7 +91,7 @@ class WebServices {
         var func = function (err:Dynamic, client:Dynamic){
             client.CalcPrazo(rData, cback (err, result.CalcPrazoResult.Servicos.cServico));
         };
-        var soap = new NodeSoap()
+        var soap = new NodeSoap();
         soap.createClient(actionUrl, func);
     }       
     public static function getDeliveryInfo(frd:FullRequestData){
@@ -110,9 +110,9 @@ extern class NodeSoap{
     public function createClient(url:String, cback:Dynamic->SoapClient->Void):Void;
 }
 extern class SoapClient{
-    public function CalcPreco(arg:FullRequestData,func:Dynamic->Dynamic->Void)
-    public function CalcPrazo(arg:TimetoDelyverRequestData,func:Dynamic->Dynamic->Void)
-    public function CalcPrecoPrazo(arg:FullRequestData,func:Dynamic->Dynamic->Void)
+    public function CalcPreco(arg:FullRequestData,func:Dynamic->Dynamic->Void);
+    public function CalcPrazo(arg:TimetoDelyverRequestData,func:Dynamic->Dynamic->Void);
+    public function CalcPrecoPrazo(arg:FullRequestData,func:Dynamic->Dynamic->Void);
 }
 
 

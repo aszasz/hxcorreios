@@ -105,7 +105,7 @@ class TestNodeCorreios {
         };
         var done = Assert.createAsync(); 
         var cws = new WebServices();
-        var callback = function (err:Dynamic, result:<) {
+        var callback = function (err:Dynamic, result:Dynamic) {
             trace("calcPrazoPreco.result" + result);
             var as = {
                 Codigo : 0 ,
